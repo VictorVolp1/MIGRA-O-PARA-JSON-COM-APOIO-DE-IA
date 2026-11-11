@@ -114,7 +114,7 @@ A orientação fornecida foi:
 O principal desafio foi substituir o armazenamento em arrays sem modificar o funcionamento das rotas e das páginas existentes. Também foi necessário garantir que cada alteração fosse gravada no arquivo correto e que os identificadores continuassem únicos mesmo depois da exclusão de registros.
 
 ## Link do Repositório
-
+https://github.com/VictorVolp1/MIGRA-O-PARA-JSON-COM-APOIO-DE-IA
 
 ## Conclusão
 A migração do GreenFlow substituiu os arrays em memória por arquivos JSON, mantendo as funcionalidades de cadastro, consulta, edição e exclusão das quatro entidades. Com isso, os dados permanecem armazenados após o encerramento do servidor. O uso da IA auxiliou na análise e na implementação, enquanto a revisão manual permitiu adaptar a solução à estrutura e aos campos já utilizados pelo projeto.
