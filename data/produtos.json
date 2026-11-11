@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "nome": "Notebook Dell Inspiron",
+    "descricao": "Notebook Dell Inspiron com processador Intel Core i5, 8GB de RAM e 256GB de SSD.",
+    "preco": 3999.99,
+    "estoque": 10,
+    "categoria": "Eletrônicos"
+  },
+  {
+    "id": 2,
+    "nome": "Doki Doki Literature Club",
+    "descricao": "Jogo de aventura visual para PC com história emocionante e personagens cativantes.",
+    "preco": 20.99,
+    "estoque": 67,
+    "categoria": "Games"
+  },
+  {
+    "id": 3,
+    "nome": "Tablet Apple iPad",
+    "descricao": "Tablet Apple iPad com tela de 10.2 polegadas, 64GB de armazenamento e câmera de 12MP.",
+    "preco": 2499.99,
+    "estoque": 20,
+    "categoria": "Eletrônicos"
+  }
+]

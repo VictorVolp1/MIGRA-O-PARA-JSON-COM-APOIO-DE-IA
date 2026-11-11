@@ -1,0 +1,52 @@
+<%- include("../partials/header") %>
+<%- include("../partials/nav") %>
+
+<div class="page-shell">
+  <div class="row justify-content-center">
+    <div class="col-xl-7 col-lg-8 col-md-10">
+      <div class="form-card">
+        <div class="form-header">
+          <h4>Editar Fornecedor</h4>
+        </div>
+
+        <div class="form-body">
+          <form action="/fornecedores/editar/<%= fornecedor.id %>" method="POST">
+            <div class="form-group">
+              <label for="razaoSocial" class="form-label">Razão Social</label>
+              <input type="text" class="form-control" id="razaoSocial" name="razaoSocial" placeholder="Digite a razão social" required value="<%= fornecedor.razaoSocial %>" />
+            </div>
+
+            <div class="form-group">
+              <label for="cnpj" class="form-label">CNPJ</label>
+              <input type="text" class="form-control" id="cnpj" name="cnpj" placeholder="Digite o CNPJ" required value="<%= fornecedor.cnpj %>" />
+            </div>
+
+            <div class="form-group">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" name="email" placeholder="Digite o email" required value="<%= fornecedor.email %>" />
+            </div>
+
+            <div class="form-group">
+              <label for="telefone" class="form-label">Telefone</label>
+              <input type="tel" class="form-control" id="telefone" name="telefone" placeholder="Digite o telefone" required value="<%= fornecedor.telefone %>" />
+            </div>
+
+            <div class="form-group">
+              <label for="cidade" class="form-label">Cidade</label>
+              <input type="text" class="form-control" id="cidade" name="cidade" placeholder="Digite a cidade" required value="<%= fornecedor.cidade %>" />
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">
+                <i class="bi bi-floppy me-2"></i>Salvar alterações
+              </button>
+              <a href="/fornecedores" class="btn btn-outline-secondary">Cancelar</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include("../partials/footer") %>

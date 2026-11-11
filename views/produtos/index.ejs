@@ -1,0 +1,63 @@
+<%- include("../partials/header") %>
+<%- include("../partials/nav") %>
+
+<div class="page-shell">
+  <div class="page-header">
+    <div>
+      <span class="eyebrow">Gestão</span>
+      <h1 class="page-title">Produtos</h1>
+      <p class="page-subtitle">Lista de produtos cadastrados no sistema.</p>
+    </div>
+
+    <div class="page-actions">
+      <a href="/produtos/cadastrar" class="btn btn-primary">
+        <i class="bi bi-box-seam me-2"></i>Novo Produto
+      </a>
+    </div>
+  </div>
+
+  <div class="card-modern table-card">
+    <div class="card-body p-0">
+      <div class="table-responsive">
+        <table class="table table-modern align-middle">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nome</th>
+              <th>Descrição</th>
+              <th>Preço</th>
+              <th>Estoque</th>
+              <th>Categoria</th>
+              <th>Opções</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% produtos.forEach(produto => { %>
+              <tr>
+                <td>#<%= produto.id %></td>
+                <td><strong><%= produto.nome %></strong></td>
+                <td><%= produto.descricao %></td>
+                <td>R$ <%= Number(produto.preco).toFixed(2) %></td>
+                <td><%= produto.estoque %></td>
+                <td><span class="badge bg-success-subtle text-success-emphasis rounded-pill px-2 py-2"><%= produto.categoria %></span></td>
+                <td>
+                  <div class="table-actions">
+                    <a class="btn btn-success btn-sm" href="/produtos/editar/<%= produto.id %>">
+                      <i class="bi bi-pencil-square me-1"></i>Editar
+                    </a>
+                    <a class="btn btn-warning btn-sm" href="/produtos/excluir/<%= produto.id %>"
+                      onclick="return confirm('Deseja excluir este produto?')">
+                      <i class="bi bi-trash3 me-1"></i>Excluir
+                    </a>
+                  </div>
+                </td>
+              </tr>
+            <% }) %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include("../partials/footer") %>

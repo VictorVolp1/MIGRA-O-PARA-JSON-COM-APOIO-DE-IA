@@ -1,0 +1,57 @@
+<%- include("../partials/header") %>
+<%- include("../partials/nav") %>
+
+<div class="page-shell">
+  <div class="page-header">
+    <div>
+      <span class="eyebrow">Gestão</span>
+      <h1 class="page-title">Categorias</h1>
+      <p class="page-subtitle">Lista de categorias cadastradas no sistema.</p>
+    </div>
+
+    <div class="page-actions">
+      <a href="/categorias/cadastro" class="btn btn-primary">
+        <i class="bi bi-plus-circle me-2"></i>Nova Categoria
+      </a>
+    </div>
+  </div>
+
+  <div class="card-modern table-card">
+    <div class="card-body p-0">
+      <div class="table-responsive">
+        <table class="table table-modern align-middle">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nome</th>
+              <th>Descrição</th>
+              <th>Opções</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% categorias.forEach(categoria => { %>
+              <tr>
+                <td>#<%= categoria.id %></td>
+                <td><strong><%= categoria.nome %></strong></td>
+                <td><%= categoria.descricao %></td>
+                <td>
+                  <div class="table-actions">
+                    <a class="btn btn-success btn-sm" href="/categorias/editar/<%= categoria.id %>">
+                      <i class="bi bi-pencil-square me-1"></i>Editar
+                    </a>
+                    <a class="btn btn-warning btn-sm" href="/categorias/excluir/<%= categoria.id %>"
+                      onclick="return confirm('Deseja excluir esta categoria?')">
+                      <i class="bi bi-trash3 me-1"></i>Excluir
+                    </a>
+                  </div>
+                </td>
+              </tr>
+            <% }) %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include("../partials/footer") %>

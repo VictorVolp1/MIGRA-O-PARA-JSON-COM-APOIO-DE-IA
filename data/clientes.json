@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "nome": "Caio Rodrigo",
+    "email": "CaioRodrigo@email.com",
+    "telefone": "11 6769-6767",
+    "cidade": "São Paulo"
+  },
+  {
+    "id": 2,
+    "nome": "Lauro Gato",
+    "email": "LauroGato@email.com",
+    "telefone": "11 6769-6768",
+    "cidade": "Belterra"
+  },
+  {
+    "id": 3,
+    "nome": "Maria Silva",
+    "email": "MariaSilva@email.com",
+    "telefone": "11 6769-6769",
+    "cidade": "Santo Amaro"
+  }
+]

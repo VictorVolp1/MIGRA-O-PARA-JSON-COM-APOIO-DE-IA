@@ -1,0 +1,61 @@
+<%- include("../partials/header") %>
+<%- include("../partials/nav") %>
+
+<div class="page-shell">
+  <div class="page-header">
+    <div>
+      <span class="eyebrow">Gestão</span>
+      <h1 class="page-title">Clientes</h1>
+      <p class="page-subtitle">Lista de clientes cadastrados no sistema.</p>
+    </div>
+
+    <div class="page-actions">
+      <a href="/clientes/cadastrar" class="btn btn-primary">
+        <i class="bi bi-person-plus me-2"></i>Novo Cliente
+      </a>
+    </div>
+  </div>
+
+  <div class="card-modern table-card">
+    <div class="card-body p-0">
+      <div class="table-responsive">
+        <table class="table table-modern align-middle">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nome</th>
+              <th>Email</th>
+              <th>Telefone</th>
+              <th>Cidade</th>
+              <th>Opções</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% clientes.forEach(cliente => { %>
+              <tr>
+                <td>#<%= cliente.id %></td>
+                <td><strong><%= cliente.nome %></strong></td>
+                <td><%= cliente.email %></td>
+                <td><%= cliente.telefone %></td>
+                <td><%= cliente.cidade %></td>
+                <td>
+                  <div class="table-actions">
+                    <a class="btn btn-success btn-sm" href="/clientes/editar/<%= cliente.id %>">
+                      <i class="bi bi-pencil-square me-1"></i>Editar
+                    </a>
+                    <a class="btn btn-warning btn-sm" href="/clientes/excluir/<%= cliente.id %>"
+                      onclick="return confirm('Deseja excluir este cliente?')">
+                      <i class="bi bi-trash3 me-1"></i>Excluir
+                    </a>
+                  </div>
+                </td>
+              </tr>
+            <% }) %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include("../partials/footer") %>

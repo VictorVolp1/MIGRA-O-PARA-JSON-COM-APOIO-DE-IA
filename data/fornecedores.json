@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "razaoSocial": " Google Brasil Internet Ltda.",
+    "cnpj": "12.345.678/0001-90",
+    "email": "contato@google.com",
+    "telefone": "11 6769-6767",
+    "cidade": "São Paulo"
+  },
+  {
+    "id": 2,
+    "razaoSocial": "Microsoft do Brasil Ltda.",
+    "cnpj": "12.345.678/0001-90",
+    "email": "contato@microsoft.com",
+    "telefone": "11 6769-6768",
+    "cidade": "São Paulo"
+  },
+  {
+    "id": 3,
+    "razaoSocial": "Pizzaria Borda Queimada Ltda.",
+    "cnpj": "12.345.678/0001-90",
+    "email": "contato@pizzariabordaqueimada.com",
+    "telefone": "11 6769-6769",
+    "cidade": "Xique-Xique"
+  }
+]

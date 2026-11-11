@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-lg navbar-modern">
+  <div class="container">
+    <a class="brand" href="/">
+      <i class="bi bi-grid-1x2-fill"></i>
+      GreenFlow
+    </a>
+
+    <button
+      class="navbar-toggler border-0"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#menu"
+      aria-label="Abrir menu"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+        <li class="nav-item">
+          <a class="nav-link <%= typeof currentPath !== 'undefined' && currentPath === '/' ? 'active' : '' %>" href="/"> Início </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link <%= typeof currentPath !== 'undefined' && currentPath.startsWith('/categorias') ? 'active' : '' %>" href="/categorias"> Categorias </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link <%= typeof currentPath !== 'undefined' && currentPath.startsWith('/clientes') ? 'active' : '' %>" href="/clientes"> Clientes </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link <%= typeof currentPath !== 'undefined' && currentPath.startsWith('/fornecedores') ? 'active' : '' %>" href="/fornecedores"> Fornecedores </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link <%= typeof currentPath !== 'undefined' && currentPath.startsWith('/produtos') ? 'active' : '' %>" href="/produtos"> Produtos </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
