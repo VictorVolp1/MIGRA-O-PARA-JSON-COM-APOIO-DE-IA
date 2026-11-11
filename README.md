@@ -24,7 +24,6 @@ GreenFlow/
 ├── app.js
 ├── package.json
 ├── README.md
-├── assets/
 ├── data/
 │   ├── categorias.json
 │   ├── clientes.json
@@ -39,10 +38,25 @@ GreenFlow/
 │   └── jsonDatabase.js
 └── views/
     ├── categorias/
+        ├── editar.ejs
+        ├── form-cadastro.ejs
+        ├── index.ejs
     ├── clientes/
+        ├── editar.ejs
+        ├── form-cadastro.ejs
+        ├── index.ejs
     ├── fornecedores/
+        ├── editar.ejs
+        ├── form-cadastro.ejs
+        ├── index.ejs
     ├── produtos/
+        ├── editar.ejs
+        ├── form-cadastro.ejs
+        ├── index.ejs
     └── partials/
+        ├── footer.ejs
+        ├── header.ejs
+        ├── nav.ejs
 ```
 
 ## Entidades Utilizadas
@@ -99,16 +113,8 @@ A orientação fornecida foi:
 ## Desafios Encontrados
 O principal desafio foi substituir o armazenamento em arrays sem modificar o funcionamento das rotas e das páginas existentes. Também foi necessário garantir que cada alteração fosse gravada no arquivo correto e que os identificadores continuassem únicos mesmo depois da exclusão de registros.
 
-## Testes Recomendados
-Para verificar a implementação, executar as operações abaixo em cada módulo (categorias, clientes, fornecedores e produtos):
-- **Create:** cadastrar um novo registro e conferir se ele aparece no arquivo JSON.
-- **Read:** abrir a página de listagem e conferir se os dados são carregados do arquivo.
-- **Update:** editar um registro e verificar se o arquivo foi atualizado.
-- **Delete:** excluir um registro e conferir se ele deixou de existir no JSON.
-- **Persistência:** reiniciar o servidor e confirmar que os registros continuam salvos.
-
 ## Link do Repositório
-https://github.com/VictorVolp1/Atividade-16-09-Nodejs-navega-o
+
 
 ## Conclusão
 A migração do GreenFlow substituiu os arrays em memória por arquivos JSON, mantendo as funcionalidades de cadastro, consulta, edição e exclusão das quatro entidades. Com isso, os dados permanecem armazenados após o encerramento do servidor. O uso da IA auxiliou na análise e na implementação, enquanto a revisão manual permitiu adaptar a solução à estrutura e aos campos já utilizados pelo projeto.
